@@ -2,14 +2,7 @@
 
 session_start();
 
-//full path to Smarty.class.php
-const SMARTY_PATH = "/usr/local/lib/php/Smarty/Smarty.class.php";
-
-//full path to the application
-const APP_PATH = "/home/michal/project/hlidame.je/";
-
-//url of the application
-const APP_URL = "http://localhost/michal/project/hlidame.je/www/";
+include("settings.php");
 
 //set up Smarty
 require(SMARTY_PATH);
@@ -36,7 +29,7 @@ $smarty->assign('t',$texts);
 $smarty->assign('app_url',APP_URL);
 
 // Connecting, selecting database
-include("settings.php");
+
 $dbconn = pg_connect($connection_string)
     or die('Could not connect: ' . pg_last_error());
 
