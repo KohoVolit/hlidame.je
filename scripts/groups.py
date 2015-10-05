@@ -68,7 +68,7 @@ for k in groups:
         'abbreviation': g2g[g]['abbreviation']
     }
     r = requests.get(url + data['code'],headers=headers)
-    print(url + c['code'])
+    print(url + g['code'])
     if r.status_code == 200:
         print(data)
         p = requests.put(url + data['code'],headers=headers,auth=auth,data=json.dumps(data))
@@ -77,7 +77,7 @@ for k in groups:
             q = requests.post(url,headers=headers,auth=auth,data=json.dumps(data))
         else:
             print(r.text)
-            print(c['code'])
+            print(g['code'])
 
 # parties
 url = settings.url + "parties/"

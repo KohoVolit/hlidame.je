@@ -25,7 +25,7 @@ for k in meps:
     mep = meps[k]
     data = {
             "group_code":groups[(mep['political_group'])]['code'],
-            "party_code":slugify.slugify(mep['party']),
+            "party_code":slugify.slugify(mep['party']).lower(),
             "country_code":mep['country_code'],
             "weight":mep['weight'],
             "name": mep['name']
