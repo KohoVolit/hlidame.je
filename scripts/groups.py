@@ -62,7 +62,7 @@ for k in groups:
     g = groups[k]
     print(k)
     data = {
-        'code': slugify.slugify(g2g[g]['abbreviation']),
+        'code': slugify.slugify(g2g[g]['abbreviation']).lower(),
         'name': g,
         'picture': 'http://www.europarl.europa.eu/ep_framework/img/group/' + g2g[g]['logo'] + ".gif",
         'abbreviation': g2g[g]['abbreviation']
@@ -88,7 +88,7 @@ for k in meps:
 for k in groups:
     g = groups[k]
     data = {
-        'code': slugify.slugify(g),
+        'code': slugify.slugify(g).lower(),
         'name': g
     }
     r = requests.get(url + data['code'],headers=headers)
