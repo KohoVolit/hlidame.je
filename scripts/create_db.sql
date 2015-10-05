@@ -35,7 +35,7 @@ CREATE TABLE activities
   person_country_code character varying NOT NULL,
   detail text,
   CONSTRAINT activities_pkey PRIMARY KEY (id),
-  CONSTRAINT activities_date_activity_code_activity_title_person_id_key UNIQUE (date, activity_code, activity_title, person_id)
+  CONSTRAINT person_id_detail_key UNIQUE (person_id,detail)
 )
 WITH (
   OIDS=FALSE
@@ -71,6 +71,7 @@ CREATE TABLE groups
   code character varying NOT NULL,
   name character varying NOT NULL,
   picture character varying,
+  abbreviation character varying,
   CONSTRAINT groups_pkey PRIMARY KEY (code)
 )
 WITH (
