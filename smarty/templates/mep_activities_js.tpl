@@ -9,12 +9,10 @@ var $charts = $('.chart-activity');
 
 var graphic_minmaxdate = minmaxdate;
 
-
+var mobile_threshold = 500;
 
 
 function drawGraphic() {
-
-    var margin = { top: 10, right: 30, bottom: 30, left: 40 };
     
         // clear out existing graphics
     $charts.empty();
@@ -39,7 +37,10 @@ function drawGraphic() {
     for (i in activities) {
         k = activities[i];
         $chart = $('#chart-'+k);
-        //$chart = $charts[i];
+        if ($chart.width() < mobile_threshold)
+            var margin = { top: 10, right: 5, bottom: 30, left: 40 };
+        else
+            var margin = { top: 10, right: 30, bottom: 30, left: 40 };
         var width = $chart.width() - margin.left - margin.right;
         timelineplot = [{
             "data": function() {

@@ -16,11 +16,13 @@
 {*        {foreach $header as $row}*}
 {*            <li><a href="{$app_url}{$row['link']}">{$row['text']}</a></li>*}
 {*        {/foreach}*}
+        <li><a href="{$app_url}ep">{$t['european_parliament']}</a></li>
+        <li><a href="{$app_url}council">{$t['council']}</a></li>
       </ul>
 
-{*      <ul class="nav navbar-nav navbar-right">*}
-{*        <li><a href="{$text['settings_link']}">{$text['settings_address']}</a></li>*}
-{*      </ul>*}
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{$app_url}about">{$t['about']}</a></li>
+      </ul>
     </div>
   </div>
 </nav>

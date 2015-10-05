@@ -7,7 +7,7 @@
     {else}
         <i class="fa fa-circle traffic-color-3 fa-2x"></i>
     {/if}
-    {round($row['activities'][$act]['ave'],2)|regex_replace:'/[.,]0+$/':''}
+    {round($row['activities'][$act]['ave'],1)|regex_replace:'/[.,]0+$/':''}
     
 {else}
     <span class="center-block"><i class="fa fa-circle traffic-color-3 fa-2x"></i> 0

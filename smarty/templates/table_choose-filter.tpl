@@ -12,7 +12,9 @@
             <h3>{$t['choose_filter']}</h3>
             
             
-            <h4>{$t['countries']}:</h4>
+            <h4>{$t['countries']}: 
+              <small><a href="#"><span id="select-all-countries">{$t['select_all']}</span></a> / <a href="#"><span id="deselect-all-countries">{$t['deselect_all']}</span></a></small>
+            </h4>
                 <table class="table table-hover">
                   <tbody>
                     {foreach $all_countries as $country}
@@ -20,15 +22,24 @@
                         <tr>
                       {/if}
                         <td class="col-sm-3">
-                        <input type="checkbox" name="cc[]" value="{$country}"
-                        {if (in_array($country,$countries))}
+                        <input type="checkbox" name="cc[]" class="checkbox-cc" value="{$country['code']}"
+                        {if (in_array($country['code'],array_keys($selected_countries)))}
                             checked
                         {/if}
-                        > {$country}
+                        > <img src="{$country['picture']}" alt="{$t["cc-{$country['code']}"]}" title="{$t["cc-{$country['code']}"]}" /> {$t["cc-{$country['code']}"]}
                     {/foreach} 
                   </tbody>
                 </table>
-            <h4>{$t['groups']}:</h4>
+             <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <input type="submit" value="{$t['explore']}" class="btn btn-success btn-block btn-lg">
+                    </div>
+            </div>
+                
+            <h4>{$t['groups']}:
+                <small><a href="#"><span id="select-all-groups">{$t['select_all']}</span></a> / <a href="#"><span id="deselect-all-groups">{$t['deselect_all']}</span></a></small>
+                </h4>
                 <table class="table table-hover">
                   <tbody>
                     {foreach $all_groups as $group}
@@ -36,11 +47,11 @@
                         <tr>
                       {/if}
                         <td class="col-sm-6">
-                        <input type="checkbox" name="g[]" value="{$group}"
-                        {if (in_array($group,$groups))}
+                        <input type="checkbox" name="g[]" class="checkbox-g" value="{$group['code']}"
+                        {if (in_array($group['code'],array_keys($selected_groups)))}
                             checked
                         {/if}
-                        > {$group}
+                        > <img src="{$group['picture']}" alt="{$t["g-{$group['code']}"]}" title="{$t["g-{$group['code']}"]}" /> {$t["g-{$group['code']}"]}
                     {/foreach} 
                   </tbody>
                 </table>

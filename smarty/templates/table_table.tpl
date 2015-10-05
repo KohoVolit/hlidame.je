@@ -1,9 +1,9 @@
-<table id="explore-table" class="table table-bordered table-hover sortable">
+<table id="explore-table" class="table table-bordered table-condensed table-hover sortable">
     <thead>
         <tr class="bg-primary">
                 <th>
             {foreach $acts as $act}
-                <th style="vertical-align:top"><i class="fa fa-{$act}" title="{$act}"></i>{$act}
+                <th style="vertical-align:top">{$t[{$act}]}
             {/foreach}
     <tbody>
     {foreach $data as $row}
@@ -16,5 +16,3 @@
     {/foreach}
  
 </table>
-
-

@@ -12,8 +12,12 @@
     {$row['meta']['party_name']} <small>({$row['meta']['weight']})</small>
     
 {elseif $show == 'groups'}
-    <img src="{$row['meta']['group_picture']}" alt="{$row['meta']['group_name']}" title="{$row['meta']['group_name']}" /><a href="#">{$row['meta']['group_name']} <small>({$row['meta']['weight']})</small></a> 
+    <a href="?{$selected_groups[{$row['meta']['group_code']}]['internal_link']}">
+        <img src="{$row['meta']['group_picture']}" alt="{$row['meta']['group_name']}" title="{$row['meta']['group_name']}" /> {$t["g-{$row['meta']['group_code']}"]} <small>({$row['meta']['weight']})</small>
+    </a> 
     
 {else if $show == 'countries'}
-    <img src="{$row['meta']['country_picture']}" alt="{$row['meta']['country_name']}" title="{$row['meta']['country_name']}" /> <a href="#">{$row['meta']['country_name']} <small>({$row['meta']['weight']})</small></a> 
+    <a href="?{$selected_countries[{$row['meta']['country_code']}]['internal_link']}">
+        <img src="{$row['meta']['country_picture']}" alt="{$row['meta']['country_name']}" title="{$row['meta']['country_name']}" /> {$t["cc-{$row['meta']['country_code']}"]} <small>({$row['meta']['weight']})</small>
+    </a> 
 {/if}

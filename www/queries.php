@@ -3,11 +3,11 @@
 
 function get($name, $dbconn, $params = []) {
     switch ($name) {
-        case 'all_countries_codes': 
-            $out = all_countries_codes($dbconn);
+        case 'all_countries': 
+            $out = all_countries($dbconn);
             return $out;
-        case 'all_groups_codes': 
-            $out = all_groups_codes($dbconn);
+        case 'all_groups': 
+            $out = all_groups($dbconn);
             return $out;
         case 'number_of_people':
             $out = number_of_people($dbconn);
@@ -377,23 +377,23 @@ function number_of_people($dbconn) {
 }
 
 // get all country codes
-function all_countries_codes($dbconn) {
-    $q = "SELECT * FROM countries;";
+function all_countries($dbconn) {
+    $q = "SELECT * FROM countries ORDER BY code;";
     $result = pg_query($dbconn,$q);
     $out = [];
     while ($row = pg_fetch_assoc($result)) {
-        $out[] = $row['code'];
+        $out[] = $row;
     }
     return $out;
 }
 
 //get all group codes
-function all_groups_codes($dbconn) {
-    $q = "SELECT * FROM groups;";
+function all_groups($dbconn) {
+    $q = "SELECT * FROM groups ORDER BY abbreviation;";
     $result = pg_query($dbconn,$q);
     $out = [];
     while ($row = pg_fetch_assoc($result)) {
-        $out[] = $row['code'];
+        $out[] = $row;
     }
     return $out;
 }
