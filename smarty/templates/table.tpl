@@ -88,7 +88,7 @@
         <h3></h3>
         <!-- filter -->
         <div class="alert alert-warning">
-            <h4><i class="fa fa-warning"></i> {$t['filter']}</h4>
+            <h4><i class="fa fa-filter"></i> {$t['filter']}</h4>
             <p>
             {$t['groups']}:
             {foreach $selected_groups as $group}

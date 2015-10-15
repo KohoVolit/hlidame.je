@@ -376,7 +376,7 @@ function number_of_people($dbconn) {
     return $out[0];
 }
 
-// get all country codes
+// get all countries
 function all_countries($dbconn) {
     $q = "SELECT * FROM countries ORDER BY code;";
     $result = pg_query($dbconn,$q);

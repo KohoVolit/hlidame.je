@@ -1,5 +1,6 @@
 <footer class="footer">
     <p>{$t['footer']}</p>
+    <p>Od autorů <a href="http://volebnikalkulacka.cz">Volební kalkulačky</a>.
     <ul class="footer-links">
       <li><a href="http://creativecommons.org/licenses/by/4.0/"><i class="fa fa-cc"></i> CC-BY</a></li>
       <li>·</li>

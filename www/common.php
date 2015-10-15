@@ -54,7 +54,7 @@ function csv2array($handle, $pre = "") {
                 $fields = $row;
                 continue;
             }
-            $array[$row[0]] = $row[1];
+            $array[$row[0]] = (isset($row[1]) ? $row[1] : "");
         }
         if (!feof($handle)) {
             /*echo "Error: unexpected fgets() fail\n";*/

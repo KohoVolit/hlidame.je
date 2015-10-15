@@ -28,7 +28,7 @@ not_whole_term,Poslanec nebyl v EP celé období
 median,Medián za EP
 count,Počet
 info,Info
-info_explanation,"<p><i class='fa fa-circle traffic-color-1'></i> více aktivit, <i class='fa fa-circle traffic-color-2'></i> středně aktivit, <i class='fa fa-circle traffic-color-3'></i> méně aktivit<p><i class='fa fa-warning'></i>TIP: Data lze seřadit kliknutím na název aktivity"
+info_explanation,"<p><i class='fa fa-circle traffic-color-1'></i> více aktivit, <i class='fa fa-circle traffic-color-2'></i> středně aktivit, <i class='fa fa-circle traffic-color-3'></i> méně aktivit<p><i class='fa fa-lightbulb-o'></i> TIP: Data lze seřadit kliknutím na název aktivity"
 select_all,Přidat vše
 deselect_all,Odebrat vše
 cc-be,Belgie
@@ -78,3 +78,21 @@ g-sd,Skupina progresivní aliance socialistů a demokratů v Evropském parlamen
 g-ni,Nezařazení
 european_parliament,Evropský parlament
 council,Rada Evropské unie
+c_title,Účast ministrů na Radě EU
+configurations,Složení
+co-agrifish,Zemědělství a rybolov
+co-compet,Konkurenceschopnost
+co-ecofin,Hospodářství a finanční věci
+co-eycs,"Vzdělávání, mládež, kultura a sport"
+co-epsco,"Zaměstnanost, sociální politika, zdraví a ochrana spotřebitele"
+co-env,Životní prostředí
+co-fac,Zahraniční věci
+co-gac,Obecné záležitosti
+co-hsg,Hlavy států nebo vlád
+co-jha,Spravedlnost a vnitřní věci
+co-tte,"Doprava, telekomunikace a energetika"
+co-xx,XX
+average_minister_presence,Průměrná účast ministra
+since,Od
+until,Do
+time_filter,Časové omezení
