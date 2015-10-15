@@ -2,7 +2,7 @@
 
 session_start();
 
-include($path2root . "settings.php");
+include("../" . $path2root . "settings.php");
 
 //set up Smarty
 require(SMARTY_PATH);

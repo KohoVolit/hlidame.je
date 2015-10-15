@@ -5,7 +5,7 @@ smarty/templates_c/*
 *~lock*
 *result.txt
 cache/
-www/settings.php
+*settings.php
 inc/Parsedown.php
 fonts/
 scripts/settings.py
