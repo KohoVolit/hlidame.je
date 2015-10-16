@@ -4,11 +4,12 @@ brand,Hlídame.je
 website_description,"" 
 website_keywords,"otevřenost"
 website_author,KohoVolit.eu
-og:image,/
-og:title,
-og:url,/
-og:site_name,
-google_tracking_id,XXX
+og:image,http://hlidame.je/images/ep.jpg
+og:title,Hlídáme.je
+og:url,http://hlidame.je
+og:site_name,Hlídáme.je
+google_tracking_id,UA-68928818-1
+yandex_metrica_id,32395705
 fp_title,Aktivita v evropských institucích
 title,Aktivita v Evropském parlamentu
 footer,Hlídame.je
