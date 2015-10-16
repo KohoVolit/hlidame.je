@@ -9,6 +9,7 @@ require($path2root . "common.php");
 require("common.php");
 include("queries.php");
 
+$smarty->assign('page','mep');
 
 // CALCULATE 1/3s
 $thirds = thirds('people',$dbconn);

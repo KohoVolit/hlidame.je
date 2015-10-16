@@ -88,26 +88,37 @@
         <h3></h3>
         <!-- filter -->
         <div class="alert alert-warning">
-            <h4><i class="fa fa-filter"></i> {$t['filter']}</h4>
-            <p>
-            {$t['groups']}:
-            {foreach $selected_groups as $group}
-                <span class="label label-primary"><a href="?{$group['internal_link']}">{$group['abbreviation']}</a></span>
-            {/foreach}
-            <p>
-            {$t['countries']}:
-            {foreach $selected_countries as $country}
-                <span class="label label-primary"><a href="?{$country['internal_link']}"><img src="{$country['picture']}" alt="{$t["cc-{$country['code']}"]}" title="{$t["cc-{$country['code']}"]}" /> {$t["cc-{$country['code']}"]}</a></span>
-            {/foreach}
+          <div class="row">
+            <div class="col-sm-1">  
+              <h4><i class="fa fa-filter"></i> {$t['filter']}</h4>
+            </div>
+            <div class="col-sm-11">
+                <p>
+                {$t['groups']}:
+                {foreach $selected_groups as $group}
+                    <span class="label label-primary"><a href="?{$group['internal_link']}">{$group['abbreviation']}</a></span>
+                {/foreach}
+                <p>
+                {$t['countries']}:
+                {foreach $selected_countries as $country}
+                    <span class="label label-primary"><a href="?{$country['internal_link']}"><img src="{$country['picture']}" alt="{$t["cc-{$country['code']}"]}" title="{$t["cc-{$country['code']}"]}" /> {$t["cc-{$country['code']}"]}</a></span>
+                {/foreach}
+            </div>
+          </div>
         </div>
         <!-- /filter -->
 
     </form>
         <div class="alert alert-info">
-            <h4><i class="fa fa-info-circle"></i> {$t['info']}</h4>
-            <p>{$t['info_explanation']}
-            
+        <div class="row">
+            <div class="col-sm-1">
+                <h4><i class="fa fa-info-circle"></i><br>{$t['info']}</h4>
+            </div>
+            <div class="col-sm-11">
+                <p>{$t['info_explanation']}
+            </div>
         </div>
+    </div>
         {include "table_table.tpl"}
     <!-- table -->
 

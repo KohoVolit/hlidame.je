@@ -52,23 +52,40 @@
         <h3></h3>
         <!-- filter -->
         <div class="alert alert-warning">
-            <h4><i class="fa fa-filter"></i> {$t['filter']}</h4>
-            <p>
-            {$t['groups']}:
-            {foreach $selected_configurations as $configuration}
-                <span class="label label-primary">{$t["co-{$configuration['configuration_code']}"]}</a></span>
-            {/foreach}
-            <p>
-            {$t['countries']}:
-            {foreach $selected_countries as $country}
-                <span class="label label-primary"><img src="{$country['picture']}" alt="{$t["cc-{$country['code']}"]}" title="{$t["cc-{$country['code']}"]}" /> {$t["cc-{$country['code']}"]}</span>
-            {/foreach}
-            <p>
-            {$t['time_filter']}:
-            {$sd|date_format:"%x"} - {$ed|date_format:"%x"}
+            <div class="row">
+            <div class="col-sm-1">  
+              <h4><i class="fa fa-filter"></i> {$t['filter']}</h4>
+            </div>
+            <div class="col-sm-11">
+                <p>
+                {$t['groups']}:
+                {foreach $selected_configurations as $configuration}
+                    <span class="label label-primary">{$t["co-{$configuration['configuration_code']}"]}</a></span>
+                {/foreach}
+                <p>
+                {$t['countries']}:
+                {foreach $selected_countries as $country}
+                    <span class="label label-primary"><img src="{$country['picture']}" alt="{$t["cc-{$country['code']}"]}" title="{$t["cc-{$country['code']}"]}" /> {$t["cc-{$country['code']}"]}</span>
+                {/foreach}
+                <p>
+                {$t['time_filter']}:
+                {$sd|date_format:"%x"} - {$ed|date_format:"%x"}
+            </div>
+          </div>
         </div>
         <!-- /filter -->
     </form>
+    
+    <div class="alert alert-info">
+        <div class="row">
+            <div class="col-sm-1">
+                <h4><i class="fa fa-info-circle"></i><br>{$t['info']}</h4>
+            </div>
+            <div class="col-sm-11">
+                <p>{$t['c_info_explanation']}
+            </div>
+        </div>
+    </div>
     
     <!-- activities -->
     {include "council_countries.tpl"}

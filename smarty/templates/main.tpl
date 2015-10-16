@@ -16,9 +16,9 @@
 	<meta property="og:site_name" content="{$t['og:site_name']}"/>
 	<meta property="og:type" content="website"/>
 
-{*    <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.5/spacelab/bootstrap.min.css" rel="stylesheet">*}
-{*    <link href="//netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">*}
+{*    <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.5/yeti/bootstrap.min.css" rel="stylesheet">*}
     <link href="{$app_url}libs/bootstrap.min.css" rel="stylesheet">
+{*   <link href="//cdn.bootcss.com/bootswatch/3.3.5/flatly/bootstrap.min.css" rel="stylesheet">*}
     <link href="{$app_url}libs/font-awesome.min.css" rel="stylesheet">
     <link href="{$app_url}project.css" rel="stylesheet">
     <script src="{$app_url}libs/jquery-1.11.3.min.js"></script>

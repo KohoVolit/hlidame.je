@@ -97,3 +97,4 @@ average_minister_presence,Průměrná účast ministra
 since,Od
 until,Do
 time_filter,Časové omezení
+c_info_explanation,"<p><i class='fa fa-stop' style='color:darkgreen'></i> ministr byl přítomen, <i class='fa fa-stop' style='color:red'></i>  ministr nebyl přítomen"
