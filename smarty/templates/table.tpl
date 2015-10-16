@@ -61,7 +61,7 @@
 {*        })*}
     </script>
 
-    <h1>{$t['title']}</h1>
+    <h1 class="text-center">{$t['title']}</h1>
 
     <!-- buttons -->    
     <div class="row">

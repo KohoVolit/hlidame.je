@@ -18,11 +18,11 @@ function drawGraphic() {
     for (i in chart_data) {
         $chart = $('#chart-'+i);
         if ($chart.width() < mobile_threshold)
-            var margin = { top: 10, right: 5, bottom: 30, left: 40 };
+            var margin = { top: 10, right: 30, bottom: 80, left: 30 };
         else
             var margin = { top: 30, right: 60, bottom: 100, left: 40 };
         
-        var width = $chart.width() - margin.left - margin.right;
+        var width = $chart.width() - margin.left;
         rowplot = [{
             "data": chart_data[i],
             "margin": margin,

@@ -3,7 +3,7 @@ d3.rowplot = function() {
     //defaults
     colors = {"yes": "darkgreen" ,"no":"red"};
     tablet_threshold = 666;
-    mobile_threshold = 400;
+    mobile_threshold = 500;
     function rowplot(selection) {
         selection.each(function(d, i) {
             //options
@@ -84,9 +84,15 @@ d3.rowplot = function() {
 		        .data(lower)
               .enter().append("text")
                 //.attr('text-anchor',"middle")
-                .attr('font-family', 'ubuntu sans-serif')
-                .attr('font-size',15)
-                .attr("transform", function(d) {return "rotate(45,"+xScale(d.position)+","+yScale(0)+")";})
+//                .attr('font-family', 'sans-serif')
+               .attr('font-size',function() { 
+                if (size['width'] > mobile_threshold) {
+                    return 13;
+                } else {
+                    return 8;
+                }
+               })
+                .attr("transform", function(d) {return "rotate(25,"+xScale(d.position)+","+yScale(0)+")";})
                 .attr('x',function(d) {return xScale(d.position);})
                 .attr('y',function(d) {return yScale(-0.5)})
                 .text(function(d) {return d.label});

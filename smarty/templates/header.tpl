@@ -8,20 +8,17 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../">{$t['brand']}</a>
+      <a class="navbar-brand{if $page=='front_page'} active{/if}" href="../">{$t['brand']}</a>
     </div>
 
     <div class="collapse navbar-collapse" id="navbar-collapse">
       <ul class="nav navbar-nav">
-{*        {foreach $header as $row}*}
-{*            <li><a href="{$app_url}{$row['link']}">{$row['text']}</a></li>*}
-{*        {/foreach}*}
-        <li><a href="{$app_url}ep">{$t['european_parliament']}</a></li>
-        <li><a href="{$app_url}council">{$t['council']}</a></li>
+        <li {if $page=='ep'}class='active'{/if}><a href="{$app_url}ep">{$t['european_parliament']}</a></li>
+        <li {if $page=='council'}class='active'{/if}><a href="{$app_url}council">{$t['council']}</a></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="{$app_url}about">{$t['about']}</a></li>
+        <li {if $page=='about'}class='active'{/if}><a href="{$app_url}about">{$t['about']}</a></li>
       </ul>
     </div>
   </div>

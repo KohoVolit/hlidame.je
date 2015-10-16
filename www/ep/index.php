@@ -9,6 +9,7 @@ require($path2root . "common.php");
 require("common.php");
 include("queries.php");
 
+$smarty->assign('page','ep');
 
 //COUNTRIES
 //get all possible

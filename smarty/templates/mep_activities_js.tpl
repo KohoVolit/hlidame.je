@@ -41,7 +41,7 @@ function drawGraphic() {
             var margin = { top: 10, right: 5, bottom: 30, left: 40 };
         else
             var margin = { top: 10, right: 30, bottom: 30, left: 40 };
-        var width = $chart.width() - margin.left - margin.right;
+        var width = $chart.width() - margin.left;
         timelineplot = [{
             "data": function() {
                 if (typeof(graphic_data[k]) === "undefined")

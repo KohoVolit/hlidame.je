@@ -31,7 +31,7 @@
         
     </script>
     
-    <h1>{$t['c_title']}</h1>
+    <h1 class="text-center">{$t['c_title']}</h1>
     
     <!-- buttons -->    
     <div class="row">

@@ -1,6 +1,6 @@
 {extends file='main.tpl'}
 {block name=body}
-    <h1>{$t['fp_title']}</h1>
+    <h1 class="text-center">{$t['fp_title']}</h1>
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-4">
