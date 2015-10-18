@@ -1,8 +1,9 @@
 <?php
 
-error_reporting(E_ALL);
-//error_reporting(0);
+//error_reporting(E_ALL);
+error_reporting(0);
 
+include ("cache.php");
 
 $path2root = "";
 require($path2root . "common.php");
