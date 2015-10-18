@@ -68,7 +68,7 @@ for k in groups:
         'abbreviation': g2g[g]['abbreviation']
     }
     r = requests.get(url + data['code'],headers=headers)
-    print(url + g['code'])
+    print(url + data['code'])
     if r.status_code == 200:
         print(data)
         p = requests.put(url + data['code'],headers=headers,auth=auth,data=json.dumps(data))
