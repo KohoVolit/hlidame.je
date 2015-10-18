@@ -68,4 +68,11 @@ function thirds($show,$dbconn) {
     
     return $thirds;
 }
+
+// last update
+function last_updated($file) {
+$file = APP_PATH . "scripts/" . $file;
+if(!file_exists($file)) return;
+return date("Y-m-d",filemtime($file));
+}
 ?>

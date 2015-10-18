@@ -8,6 +8,6 @@
       <li>·</li>
       <li><a href="http://evropskehodnoty.cz"><i class="fa fa-globe"></i> Evropské hodnoty</a></li>
       <li>·</li>
-      <li><a href="https://github.com/KohoVolit/legislative-openness-data-explorer/"><i class="fa fa-github"></i> Source</a></li>
+      <li><a href="https://github.com/KohoVolit/hlidame.je/"><i class="fa fa-github"></i> Source</a></li>
     </ul>
 </footer>

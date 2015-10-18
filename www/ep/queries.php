@@ -48,30 +48,31 @@ function get($name, $dbconn, $params = []) {
 function activities_person($dbconn,$id) {
     $q = "
     SELECT activity_code, date, activity_title,
-t2.id as person_id, t2.name as person_name,
-t2.group_code as group_code, t2.party_code as party_code,
-t2.country_code as country_code, t2.weight as weight,
+t0.id as person_id, t0.name as person_name,
+t0.group_code as group_code, t0.party_code as party_code,
+t0.country_code as country_code, t0.weight as weight,
 t4.name as party_name, t5.name as group_name, t5.picture as group_picture, 
 t6.name as country_name, t6.name_en as country_name_en, t6.picture as country_picture
 FROM
-	(SELECT * FROM activities
-	WHERE person_id=$1) as t1
-LEFT JOIN 
-	people as t2
-ON t1.person_id = t2.id
+	(SELECT * FROM people
+  WHERE id=$1) as t0
+LEFT JOIN
+	activities as t1
+ON t0.id = t1.person_id
 LEFT JOIN
 	parties as t4
-ON t2.party_code = t4.code
+ON t0.party_code = t4.code
 LEFT JOIN
 	groups as t5
-ON t2.group_code = t5.code
+ON t0.group_code = t5.code
 LEFT JOIN
 	countries as t6
-ON t2.country_code = t6.code
+ON t0.country_code = t6.code
 ORDER BY activity_code, date DESC
     ";
     $result = pg_query_params($dbconn,$q,[$id]);
     $out = ['activities'=>[],'meta'=>[]];
+    $i = 0;
     while ($row = pg_fetch_assoc($result)) {
         if (!isset($out['activities'][$row['activity_code']]))
             $out['activities'][$row['activity_code']] = [];
@@ -81,6 +82,7 @@ ORDER BY activity_code, date DESC
             'date' => $row['date']
         ];  
         $out['meta'] = $row;
+        $i++;
     }
     return $out; 
 }
@@ -205,7 +207,7 @@ ORDER BY country_code, activity_code, ave DESC
 // get activities of people
 function activities_people($dbconn,$filter) {
     $q = "
-SELECT t1.n/t2.sum as ave, n, activity_code, 
+SELECT t1.n/t2.count as ave, n, activity_code, 
 t3.id as person_id, t3.name as person_name,
 t3.group_code as group_code, t3.party_code as party_code, t3.country_code as country_code, t3.weight as weight,
 t4.name as party_name, t5.name as group_name, t5.picture as group_picture, 
@@ -216,7 +218,7 @@ FROM
     AND person_group_code = ANY ($2)
     GROUP BY activity_code, person_id) as t1
 LEFT JOIN
-    (SELECT sum(weight), id FROM people 
+    (SELECT count(*), id FROM people 
     WHERE country_code = ANY($1)
     AND group_code = ANY ($2)
     GROUP BY id) as t2

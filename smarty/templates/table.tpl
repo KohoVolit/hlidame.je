@@ -59,6 +59,11 @@
 {*                $("#"+this.id).hide();*}
 {*            });*}
 {*        })*}
+
+        //init tooltips
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        })
     </script>
 
     <h1 class="text-center">{$t['title']}</h1>
@@ -115,12 +120,20 @@
                 <h4><i class="fa fa-info-circle"></i><br>{$t['info']}</h4>
             </div>
             <div class="col-sm-11">
+                {if $show=="people"}
+                <p>{$t['info_explanation_people']}
+                {else}
                 <p>{$t['info_explanation']}
+                {/if}
             </div>
         </div>
     </div>
         {include "table_table.tpl"}
     <!-- table -->
-
+    <div class="alert alert-info" role="alert">
+      {$t['data_info']}<br>
+      {$t['last_updated']}: {$last_updated}
+    </div>
+    
 
 {/block}

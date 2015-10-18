@@ -11,6 +11,9 @@
       <li><strong>{$data['meta']['party_name']}</strong>
       <li><img src="{$data['meta']['group_picture']}" alt="{$data['meta']['group_name']}" title="{$data['meta']['group_name']}" /> <strong>{$data['meta']['group_name']}</strong> 
       <li><img src="{$data['meta']['country_picture']}" alt="{$data['meta']['country_name']}" title="{$data['meta']['country_name']}" /> <strong>{$data['meta']['country_name']}</strong> 
+      {if ($data['meta']['weight'] < 1)}
+      <li><strong>{$t['not_whole_term']}</strong>
+    {/if}
     </ul>
   </div>
 </div> <!-- /row -->

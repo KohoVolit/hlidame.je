@@ -3,6 +3,8 @@
 error_reporting(E_ALL);
 //error_reporting(0);
 
+include ("cache.php");
+
 $path2root = "../";
 require($path2root . "common.php");
 
@@ -102,6 +104,8 @@ switch ($show) {
 }  
 #print_r($as);die();     
 $smarty->assign('data',$as);
+
+$smarty->assign('last_updated',last_updated("activities.json"));
 
 $smarty->display('table.tpl');
 

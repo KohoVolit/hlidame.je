@@ -8,7 +8,7 @@
     <meta name="description" content="{$t['website_description']}">
     <meta name="keywords" content="{$t['website_keywords']}">
     <meta name="author" content="{$t['website_author']}">
-    <link type="image/x-icon" href="/images/favicon.ico" rel="shortcut icon">
+    <link type="image/x-icon" href="{$app_url}/images/favicon.ico" rel="shortcut icon">
     
     <meta property="og:image" content="{$t['og:image']}"/>
 	<meta property="og:title" content="{$t['og:title']}"/>

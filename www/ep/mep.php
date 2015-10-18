@@ -28,5 +28,7 @@ $data = get('activities_person',$dbconn, $id);
 
 $smarty->assign('data',$data);
 
+$smarty->assign('last_updated',last_updated("activities.json"));
+
 $smarty->display('mep.tpl');
 ?>
