@@ -11,7 +11,7 @@
   define('CACHE_PATH', implode('/',$path_array) . "/cache/");
 
   // how long to keep the cache files (hours)
-  define('CACHE_TIME', 0.00000001);
+  define('CACHE_TIME', 12);
 
   // return location and name for cache file
   function cache_file()
