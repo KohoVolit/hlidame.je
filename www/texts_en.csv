@@ -11,7 +11,7 @@ og:site_name,Hlídáme.je
 google_tracking_id,UA-68928818-1
 yandex_metrica_id,32395705
 fp_title,Activity in European institutions
-title,Activity in European institutions
+title,Activity in European parliament
 footer,Hlídame.je
 explore,Explore
 download,Download
@@ -31,8 +31,8 @@ count,Count
 info,Info
 info_explanation_people,"<p><i class='fa fa-circle traffic-color-1'></i> more activity, <i class='fa fa-circle traffic-color-2'></i> average activity, <i class='fa fa-circle traffic-color-3'></i> less activity<p><i class='fa fa-lightbulb-o'></i> TIP: Data can be sorted by clicking the name of an activity"
 info_explanation,"<p><i class='fa fa-circle traffic-color-1'></i> more activity, <i class='fa fa-circle traffic-color-2'></i> average activity, <i class='fa fa-circle traffic-color-3'></i> less activity<p>We use within-group average<p><i class='fa fa-lightbulb-o'></i> TIP: Data can be sorted by clicking the name of an activity"
-select_all,Add all
-deselect_all,Remove all
+select_all,Check all
+deselect_all,Uncheck all
 cc-be,Belgium
 cc-bg,Bulgaria
 cc-cz,Czech Republic
@@ -102,11 +102,11 @@ co-hsg,Heads of state or government
 co-jha,Justice and home affairs
 co-tte,"Transport, telecommunications and energy"
 co-xx,XX
-average_minister_presence,A minister's average attendance
+average_minister_presence,Ministers' average attendance
 since,Since
 until,Until
 time_filter,Time filter
-c_info_explanation,"<p><i class='fa fa-stop' style='color:darkgreen'></i> The minister was present, <i class='fa fa-stop' style='color:red'></i>  The minister was absent"
+c_info_explanation,"<p><i class='fa fa-stop' style='color:darkgreen'></i> Minister was present, <i class='fa fa-stop' style='color:red'></i>  Minister was absent"
 data_info,"Data for the 8th European Parliament (starting in 2014)"
 last_updated,Last update
 methodology,Methodology

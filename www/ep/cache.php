@@ -16,7 +16,7 @@
   // return location and name for cache file
   function cache_file()
   {
-    return CACHE_PATH . md5($_SERVER['REQUEST_URI']);
+    return CACHE_PATH . md5($_SERVER['REQUEST_URI'].json_encode($_SESSION));
   }
 
   // display cached file if present and not expired

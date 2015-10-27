@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 include("../" . $path2root . "settings.php");
 
 //set up Smarty
@@ -11,7 +9,7 @@ $smarty->setTemplateDir(APP_PATH . 'smarty/templates');
 $smarty->setCompileDir(APP_PATH . 'smarty/templates_c');
 
 //get language
-$lang = lang();
+$lang = lang($path2root);
 $smarty->assign('lang',$lang);
 
 //include texts
@@ -26,8 +24,8 @@ $smarty->assign('app_url',APP_URL);
 /**
 * set language
 */
-function lang() {
-    if (isset($_GET['lang']) and (is_readable('../texts_' . $_GET['lang'] . '.csv')))
+function lang($path2root) {
+    if (isset($_GET['lang']) and (is_readable($path2root . 'texts_' . $_GET['lang'] . '.csv')))
         {
             $_SESSION["lang"] = $_GET['lang'];
             return $_GET['lang'];
