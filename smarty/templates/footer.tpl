@@ -9,6 +9,8 @@
       
       <li>·
       <li><a href="http://www.europarl.europa.eu/"><img src="{$app_url}images/ep.png" alt="EP" /> </a>
+      <li>·
+      <li><a href="http://visegrad.org/"><img src="{$app_url}images/visegrad_logo_small.png" alt="Visegrad Fund" /> </a>
     </ul>
     <ul class="footer-links">
         <li><a href="{$app_url}about/#about"><i class="fa fa-mobile-phone"></i> Kontakt</a></li>
